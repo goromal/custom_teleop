@@ -10,4 +10,6 @@
 
   <depend>roscpp</depend>
   <depend>joy</depend>
+
+  <depend>geometry_msgs</depend>
 </package>

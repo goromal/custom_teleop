@@ -14,16 +14,25 @@ catkin_simple()
 
 cs_add_library(keyboard_teleop
   src/lib/keyboard_teleop.cpp
+  src/lib/keyboard_definitions.cpp
 )
 
 ##############################
 #### example teleop nodes ####
 ##############################
 
-# cs_add_executable(arrow_teleop_twist
-#   src/arrow_teleop_twist.cpp
-# )
-# target_link_libraries(arrow_teleop ${catkin_LIBRARIES})
+#cs_add_executable(arrow_teleop_twist
+#  src/arrow_teleop_twist.cpp
+#  src/lib/keyboard_teleop.cpp
+#  src/lib/keyboard_definitions.cpp
+#)
+#target_link_libraries(arrow_teleop_twist ${catkin_LIBRARIES})
+
+cs_add_executable(arrow_teleop_pose
+  src/arrow_teleop_pose.cpp
+  src/lib/keyboard_definitions.cpp
+)
+target_link_libraries(arrow_teleop_pose ${catkin_LIBRARIES})
 
 ###############################
 ########## endmatter ##########
